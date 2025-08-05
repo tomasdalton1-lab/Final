@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
@@ -46,7 +47,13 @@ export function Problem() {
       observer.observe(sectionRef.current)
     }
     
-    return () => {
+    return (
+  <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>) => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
       }
@@ -98,3 +105,4 @@ export function Problem() {
     </section>
   )
 }
+  </motion.div>)

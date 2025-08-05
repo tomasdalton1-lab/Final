@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 'use client'
 
 import { useState } from 'react'
@@ -54,6 +55,12 @@ export function SocialTest() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
+  <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
     <section className={`${styles.socialTest} font-montserrat`}>
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <h2 className={styles.heading}>{socialTestData.heading}</h2>
@@ -89,3 +96,4 @@ export function SocialTest() {
     </section>
   )
 }
+  </motion.div>)

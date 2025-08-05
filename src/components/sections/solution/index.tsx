@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
@@ -91,7 +92,13 @@ export function Solution() {
       if (ref) observer.observe(ref)
     })
 
-    return () => {
+    return (
+  <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>) => {
       if (phaseRefs.current) {
         phaseRefs.current.forEach(ref => {
           if (ref) observer.unobserve(ref)
@@ -224,3 +231,4 @@ export function Solution() {
     </section>
   )
 }
+  </motion.div>)

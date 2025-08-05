@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 'use client'
 
 import { useState } from 'react'
@@ -45,6 +46,12 @@ export function Diference() {
   }
 
   return (
+  <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
     <section id="diference" className={`${styles.diference} font-montserrat`}>
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <h2 className={styles.heading}>{diferenceData.heading}</h2>
@@ -63,3 +70,4 @@ export function Diference() {
     </section>
   )
 }
+  </motion.div>)

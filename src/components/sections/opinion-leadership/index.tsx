@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 'use client'
 
 import { useState } from 'react'
@@ -56,6 +57,12 @@ export function OpinionLeadership() {
   }
 
   return (
+  <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
     <section id="opinion-leadership" className={`${styles.opinionLeadership} font-montserrat`}>
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <h2 className={styles.heading}>{opinionData.heading}</h2>
@@ -85,3 +92,4 @@ export function OpinionLeadership() {
     </section>
   )
 }
+  </motion.div>)
