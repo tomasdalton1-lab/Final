@@ -1,0 +1,107 @@
+// Social Test section styles
+.socialTest
+  width 100%
+  background-color #000
+  color #fff
+  padding 2rem 0
+  font-family var(--font-montserrat)
+
+.heading
+  font-size 2.5rem
+  font-weight var(--font-weight-bold)
+  margin-bottom 1rem
+  text-align center
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 768px)
+    font-size 2rem
+  
+  @media (max-width: 480px)
+    font-size 1.5rem
+
+.subheading
+  font-size 1.25rem
+  max-width 800px
+  margin 0 auto 3rem
+  text-align center
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)
+  
+  @media (max-width: 768px)
+    font-size 1.125rem
+  
+  @media (max-width: 480px)
+    font-size 1rem
+
+.testimonialContainer
+  position relative
+  max-width 800px
+  margin 0 auto 2rem
+  min-height 300px
+
+.testimonialCard
+  position absolute
+  top 0
+  left 0
+  width 100%
+  background-color #111
+  border-radius 8px
+  padding 2rem
+  opacity 0
+  transform translateX(20px)
+  transition all 0.5s ease
+  visibility hidden
+  
+  &.active
+    opacity 1
+    transform translateX(0)
+    visibility visible
+
+.avatar
+  font-size 3rem
+  text-align center
+  margin-bottom 1.5rem
+
+.content
+  font-size 1.125rem
+  font-style italic
+  text-align center
+  margin-bottom 1.5rem
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)
+  
+  @media (max-width: 480px)
+    font-size 1rem
+
+.author
+  text-align center
+
+.name
+  font-weight var(--font-weight-semibold)
+  font-size 1.125rem
+  margin-bottom 0.25rem
+  font-family var(--font-montserrat)
+
+.role
+  font-size 0.875rem
+  color rgba(255, 255, 255, 0.7)
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-light)
+
+.controls
+  display flex
+  justify-content center
+  gap 0.5rem
+
+.dot
+  width 12px
+  height 12px
+  border-radius 50%
+  background-color rgba(255, 255, 255, 0.3)
+  border none
+  cursor pointer
+  transition background-color 0.3s ease
+  padding 0
+  
+  &.activeDot
+    background-color #fff

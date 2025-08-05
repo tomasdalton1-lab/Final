@@ -1,0 +1,140 @@
+.callToAction {
+  width: 100%;
+  background-color: #17293A;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+}
+
+.subheading {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-regular);
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 600px;
+  background-color: #111;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-montserrat);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  font-family: var(--font-montserrat);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  min-height: 120px;
+  resize: vertical;
+  font-family: var(--font-montserrat);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--font-montserrat);
+}
+
+.submitButton:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.privacyText {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-light);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .subheading {
+    font-size: 1.125rem;
+  }
+  
+  .formContainer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+  }
+  
+  .formContainer {
+    padding: 1rem;
+  }
+}

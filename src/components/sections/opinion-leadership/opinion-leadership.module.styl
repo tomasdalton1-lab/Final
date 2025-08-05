@@ -1,0 +1,116 @@
+// Opinion Leadership section styles
+.opinionLeadership
+  width 100%
+  background-color #111
+  color #fff
+  padding 2rem 0
+  font-family var(--font-montserrat)
+
+.heading
+  font-size 2.5rem
+  font-weight var(--font-weight-bold)
+  margin-bottom 1rem
+  text-align center
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 768px)
+    font-size 2rem
+  
+  @media (max-width: 480px)
+    font-size 1.5rem
+
+.subheading
+  font-size 1.25rem
+  max-width 800px
+  margin 0 auto 3rem
+  text-align center
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)
+  
+  @media (max-width: 768px)
+    font-size 1.125rem
+  
+  @media (max-width: 480px)
+    font-size 1rem
+
+.articlesGrid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap 2rem
+  max-width 1200px
+  margin 0 auto
+  
+  @media (max-width: 1024px)
+    grid-template-columns repeat(2, 1fr)
+  
+  @media (max-width: 640px)
+    grid-template-columns 1fr
+
+.articleCard
+  background-color #000
+  border-radius 8px
+  overflow hidden
+  transition transform 0.3s ease
+  
+  &:hover
+    transform translateY(-5px)
+
+.articleImage
+  height 150px
+  background-color #222
+  display flex
+  align-items center
+  justify-content center
+  font-size 4rem
+
+.articleContent
+  padding 1.5rem
+
+.articleTitle
+  font-size 1.25rem
+  font-weight var(--font-weight-semibold)
+  margin-bottom 0.75rem
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 480px)
+    font-size 1.125rem
+
+.articleExcerpt
+  font-size 0.875rem
+  color rgba(255, 255, 255, 0.8)
+  margin-bottom 1rem
+  line-height 1.5
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)
+
+.articleMeta
+  display flex
+  flex-direction column
+  gap 0.5rem
+  margin-bottom 1.5rem
+  font-size 0.75rem
+  color rgba(255, 255, 255, 0.6)
+  font-family var(--font-montserrat)
+
+.articleAuthor
+  font-weight var(--font-weight-medium)
+  font-family var(--font-montserrat)
+
+.articleDetails
+  display flex
+  gap 0.5rem
+
+.readMoreButton
+  background-color transparent
+  border 1px solid #fff
+  color #fff
+  padding 0.5rem 1rem
+  border-radius 4px
+  font-size 0.875rem
+  cursor pointer
+  transition all 0.3s ease
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-medium)
+  
+  &:hover
+    background-color rgba(255, 255, 255, 0.1)

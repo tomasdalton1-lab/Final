@@ -1,0 +1,57 @@
+// Custom styles for the Problem section that complement Tailwind
+
+// Global font family for problem section
+:global(.problem-section)
+  font-family var(--font-montserrat)
+
+// Card hover effect enhancement
+:global(.card-hover)
+  transition transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out
+  
+  &:hover
+    transform translateY(-8px)
+    box-shadow 0 10px 25px rgba(0, 0, 0, 0.3)
+
+// Custom gradient for section background if needed
+.gradientBackground
+  background linear-gradient(to bottom, #000, #111)
+
+// Custom animation for pain points
+.painPointCard
+  position relative
+  overflow hidden
+  
+  &:before
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 4px
+    background linear-gradient(90deg, #3b82f6, #60a5fa)
+    transform scaleX(0)
+    transform-origin left
+    transition transform 0.3s ease
+  
+  &:hover:before
+    transform scaleX(1)
+
+// Custom text highlight effect
+.highlightText
+  position relative
+  display inline-block
+  
+  &:after
+    content ''
+    position absolute
+    bottom -2px
+    left 0
+    width 100%
+    height 2px
+    background-color #3b82f6
+    transform scaleX(0)
+    transform-origin left
+    transition transform 0.3s ease
+  
+  &:hover:after
+    transform scaleX(1)

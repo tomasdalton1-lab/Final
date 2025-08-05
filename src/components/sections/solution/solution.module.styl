@@ -1,0 +1,81 @@
+// Solution section styles
+.solution
+  width 100%
+  background-color #000
+  color #fff
+  padding 2rem 0
+  font-family var(--font-montserrat)
+
+.heading
+  font-size 2.5rem
+  font-weight var(--font-weight-bold)
+  margin-bottom 1rem
+  text-align center
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 768px)
+    font-size 2rem
+  
+  @media (max-width: 480px)
+    font-size 1.5rem
+
+.subheading
+  font-size 1.25rem
+  max-width 800px
+  margin 0 auto 3rem
+  text-align center
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)
+  
+  @media (max-width: 768px)
+    font-size 1.125rem
+  
+  @media (max-width: 480px)
+    font-size 1rem
+
+.solutionsGrid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap 2rem
+  max-width 1200px
+  margin 0 auto
+  
+  @media (max-width: 1024px)
+    grid-template-columns repeat(2, 1fr)
+  
+  @media (max-width: 640px)
+    grid-template-columns 1fr
+
+.solutionCard
+  background-color #111
+  border-radius 8px
+  padding 2rem
+  transition transform 0.3s ease
+  
+  &:hover
+    transform translateY(-5px)
+
+.iconContainer
+  margin-bottom 1.5rem
+  display flex
+  justify-content center
+
+.icon
+  font-size 3rem
+
+.solutionTitle
+  font-size 1.5rem
+  font-weight var(--font-weight-semibold)
+  margin-bottom 1rem
+  text-align center
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 480px)
+    font-size 1.25rem
+
+.solutionDescription
+  font-size 1rem
+  text-align center
+  color rgba(255, 255, 255, 0.8)
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)

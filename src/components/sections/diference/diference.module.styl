@@ -1,0 +1,85 @@
+// Difference section styles
+.diference
+  width 100%
+  background-color #111
+  color #fff
+  padding 2rem 0
+  font-family var(--font-montserrat)
+
+.heading
+  font-size 2.5rem
+  font-weight var(--font-weight-bold)
+  margin-bottom 1rem
+  text-align center
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 768px)
+    font-size 2rem
+  
+  @media (max-width: 480px)
+    font-size 1.5rem
+
+.subheading
+  font-size 1.25rem
+  max-width 800px
+  margin 0 auto 3rem
+  text-align center
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)
+  
+  @media (max-width: 768px)
+    font-size 1.125rem
+  
+  @media (max-width: 480px)
+    font-size 1rem
+
+.pointsGrid
+  display grid
+  grid-template-columns repeat(2, 1fr)
+  gap 2rem
+  max-width 1000px
+  margin 0 auto
+  
+  @media (max-width: 768px)
+    grid-template-columns 1fr
+
+.pointCard
+  background-color #000
+  border-radius 8px
+  padding 2rem
+  position relative
+  border 1px solid rgba(255, 255, 255, 0.1)
+  
+  &:hover
+    border-color rgba(255, 255, 255, 0.3)
+
+.pointNumber
+  position absolute
+  top -15px
+  left -15px
+  width 40px
+  height 40px
+  border-radius 50%
+  background-color #fff
+  color #000
+  display flex
+  align-items center
+  justify-content center
+  font-weight var(--font-weight-bold)
+  font-size 1.25rem
+  font-family var(--font-montserrat)
+
+.pointTitle
+  font-size 1.5rem
+  font-weight var(--font-weight-semibold)
+  margin-bottom 1rem
+  font-family var(--font-montserrat)
+  
+  @media (max-width: 480px)
+    font-size 1.25rem
+
+.pointDescription
+  font-size 1rem
+  color rgba(255, 255, 255, 0.8)
+  font-family var(--font-montserrat)
+  font-weight var(--font-weight-regular)

@@ -1,0 +1,350 @@
+.solution {
+  width: 100%;
+  background-color: #fff;
+  color: #17293A;
+  padding: 5rem 0 7rem;
+  font-family: var(--font-montserrat);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  color: #17293A;
+}
+
+.subheading {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-regular);
+  color: rgba(23, 41, 58, 0.8);
+}
+
+/* Timeline container */
+.timelineContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Animation classes for scroll-based reveal */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Staggered animation delays for timeline items */
+.phaseContainer:nth-child(1).visible {
+  transition-delay: 0ms;
+}
+
+.phaseContainer:nth-child(2).visible {
+  transition-delay: 200ms;
+}
+
+.phaseContainer:nth-child(3).visible {
+  transition-delay: 400ms;
+}
+
+/* Contenedor para la línea de tiempo */
+.timelineWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Timeline segments */
+.timelineSegment {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: rgba(23, 41, 58, 0.2);
+  z-index: 1;
+  transition: opacity 0.8s ease, transform 0.8s ease, height 0.8s ease;
+  transform-origin: top center;
+  opacity: 0;
+  transform: translateX(-50%) scaleY(0);
+}
+
+.timelineSegment[style*="opacity: 1"] {
+  transform: translateX(-50%) scaleY(1);
+  opacity: 1 !important;
+}
+
+/* Connecting lines between icons */
+.connectingLine {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 3rem;
+  bottom: -3rem;
+  background-color: rgba(23, 41, 58, 0.2);
+  z-index: 0;
+}
+
+.phaseContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 3rem;
+  min-height: 5rem;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.phaseContainer:last-child {
+  margin-bottom: 0;
+}
+
+.phaseLeft .phaseContentLeft {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.phaseRight .phaseContentRight {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.phaseContentLeft,
+.phaseContentRight {
+  max-width: 100%;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #17293A;
+  border: 2px solid rgba(23, 41, 58, 0.2);
+  border-radius: 50%;
+  height: 6.5rem;
+  width: 6.5rem;
+  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.icon img {
+  object-fit: contain;
+}
+
+.gifIcon {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  transform: scale(1.2);
+}
+
+.firstIcon {
+  transform: scale(1.2) translateY(-2px);
+}
+
+.secondIcon {
+  transform: scale(1.2) translateY(-2px);
+}
+
+/* Phase content container */
+.phaseContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Phase description animation styles */
+.phaseDescription {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              margin 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  margin-top: 0;
+  font-size: 1rem;
+  color: rgba(23, 41, 58, 0.8);
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+}
+
+/* Hover effects for all phase containers */
+.phaseContainer:hover .phaseDescription,
+.iconContainer:hover ~ .phaseContentRight .phaseDescription,
+.iconContainer:hover ~ .phaseContentLeft .phaseDescription,
+.phaseContentRight:hover .phaseDescription,
+.phaseContentLeft:hover .phaseDescription {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+.iconContainer {
+  transform: scale(1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.iconContainer:hover {
+  transform: scale(1.05);
+}
+
+.phaseTitle {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+  color: #17293A;
+  font-family: var(--font-gibson), var(--font-montserrat);
+}
+
+.phaseDescription {
+  font-size: 1rem;
+  color: rgba(23, 41, 58, 0.8);
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .solution {
+    padding: 4rem 0 6rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .subheading {
+    font-size: 1.125rem;
+  }
+  
+  /* Hide timeline line on mobile */
+  .timelineLine,
+  .timelineWrapper,
+  .timelineSegment {
+    display: none !important;
+  }
+  
+  .phaseContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 4rem !important;
+  }
+  
+  /* Force specific order for mobile: icon first, then content */
+  .phaseContainer > div:nth-child(1),
+  .phaseContainer > div:nth-child(3) {
+    order: 2 !important;
+  }
+  
+  .phaseContainer > div:nth-child(2) {
+    order: 1 !important;
+  }
+  
+  .phaseContentLeft,
+  .phaseContentRight {
+    padding: 0 !important;
+    margin-top: 1.5rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  /* Show all content containers on mobile */
+  .phaseLeft .phaseContentLeft,
+  .phaseRight .phaseContentRight,
+  .phaseLeft .phaseContentRight,
+  .phaseRight .phaseContentLeft {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  
+  /* Only show one content container per phase */
+  .phaseLeft .phaseContentRight,
+  .phaseRight .phaseContentLeft {
+    display: none !important;
+  }
+  
+  .iconContainer {
+    height: 5rem !important;
+    width: 5rem !important;
+    margin: 0 auto 1.5rem !important;
+  }
+  
+  .phaseTitle {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Mobile phase description styles */
+  .phaseDescription {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-top: 0.75rem !important;
+    overflow: visible !important;
+  }
+  
+  /* Always show descriptions on mobile without hover */
+  .phaseContentRight .phaseDescription,
+  .phaseContentLeft .phaseDescription {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-top: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .solution {
+    padding: 3rem 0 5rem;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+  }
+  
+  .solutionTitle {
+    font-size: 1.25rem;
+  }
+}

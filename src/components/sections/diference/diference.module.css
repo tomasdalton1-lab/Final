@@ -1,0 +1,103 @@
+.diference {
+  width: 100%;
+  background-color: #17293A;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+}
+
+.subheading {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-regular);
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pointCard {
+  background-color: #0d1a25;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pointCard:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pointNumber {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.25rem;
+  font-family: var(--font-montserrat);
+}
+
+.pointTitle {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+  font-family: var(--font-montserrat);
+}
+
+.pointDescription {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .subheading {
+    font-size: 1.125rem;
+  }
+  
+  .pointsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pointTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+  }
+}

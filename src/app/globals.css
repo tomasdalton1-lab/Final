@@ -1,0 +1,77 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font variables */
+:root {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+}
+
+/* Base styles */
+html, body {
+  background-color: #17293A;
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-montserrat);
+}
+
+/* Custom styles that extend Tailwind */
+@layer components {
+  .container {
+    @apply w-full max-w-7xl mx-auto px-4;
+  }
+}
+
+/* Elementor-style animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+  30% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.7;
+    transform: translate3d(0, 20px, 0);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.animated-fast {
+  animation-duration: 1.8s;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.elementor-invisible {
+  visibility: hidden;
+}
