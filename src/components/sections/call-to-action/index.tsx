@@ -70,6 +70,7 @@ export function CallToAction() {
         </div>
       </div>
     </section>
+</motion.div>
   )
 }
   </motion.div>)

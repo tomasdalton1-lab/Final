@@ -90,6 +90,7 @@ export function OpinionLeadership() {
         </div>
       </div>
     </section>
+</motion.div>
   )
 }
   </motion.div>)

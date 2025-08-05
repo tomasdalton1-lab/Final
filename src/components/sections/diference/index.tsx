@@ -68,6 +68,7 @@ export function Diference() {
         </div>
       </div>
     </section>
+</motion.div>
   )
 }
   </motion.div>)
